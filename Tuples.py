@@ -39,4 +39,4 @@ for x, y in poles:
 bands = (800, 900, 1800, 2100)
 high_bands = bands[2:]
 
-print(high_bands)
+print(high_bands) #When tuples are sliced, they maintain their original data types. 

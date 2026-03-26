@@ -1,4 +1,4 @@
-'''rows = 3
+rows = 3
 cols = 3
 
 matrix = []
@@ -11,9 +11,9 @@ for i in range(rows):
         else:            
             row.append(0)
     matrix.append(row)
-print(matrix)'''
+print(matrix)
 
-'''
+
 rows = 4
 cols = 4
 
@@ -27,8 +27,8 @@ for i in range(rows):
         else:
             row.append(0)
     matrix.append(row)
-print(matrix) '''
-'''
+print(matrix)
+
 rows = 5
 cols = 5
 matrix = []
@@ -41,9 +41,9 @@ for i in range(rows):
         else:
             row.append(0)
         matrix.append(row)
-print(matrix)'''
+print(matrix)
 
-'''
+
 rows = 3
 cols = 3
 
@@ -58,17 +58,17 @@ for i in range(rows):
 
     matrix.append(row)
 
-print(matrix) '''
+print(matrix)
 
-'''
+
 row = []
 
 for i in range(5):
     value = (5 - i)
 
     row.append(value)
-print(row) '''
-'''
+print(row) 
+
 rows = 3 
 cols = 3
 matrix = []
@@ -81,9 +81,9 @@ for i in range(rows):
         row.append(value)
 
     matrix.append(row)
-print(matrix) '''
+print(matrix)
 
-'''
+
 rows = 4
 cols = 4
 
@@ -100,8 +100,8 @@ for i in range(rows):
 
     matrix.append(row)
 
-print(matrix) '''
-'''
+print(matrix)
+
 rows = 4
 cols = 4
 
@@ -118,9 +118,9 @@ for i in range(rows):
 
     matrix.append(row)
 
-print(matrix) '''
+print(matrix)
 
-'''
+
 rows = 4
 cols = 4
 
@@ -137,9 +137,9 @@ for i in range(rows):
 
     matrix.append(row)
 
-print(matrix) '''
+print(matrix)
 
-'''
+
 rows = 3
 cols = 3
 
@@ -155,18 +155,18 @@ for i in range(rows):
     
     matrix.append(row)
 
-print(matrix) '''
+print(matrix)
 
 #Lists comprehension
-'''
+
 rows = 3
 cols = 3
 matrix = []
 row = [['Black' if (i+j) % 2 == 0 else 'White' for j in range(cols)] for i in range(rows)]
 matrix.append(row)
-print(matrix) '''
+print(matrix)
 
-'''
+
 rows = 4
 cols = 4
 
@@ -174,8 +174,8 @@ matrix = []
 
 row = [[1 if j<=i else 0 for j in range(cols)] for i in range(rows)]
 matrix.append(row)
-print(matrix) '''
-'''
+print(matrix) 
+
 rows = 5
 
 matrix = []
@@ -187,13 +187,13 @@ for i in range(rows):
         row.append(j)
     
     matrix.append(row)
-print(matrix) '''
+print(matrix)
 
-'''matrix = [[i for j in range(i + 1)] for i in range(5)]
+matrix = [[i for j in range(i + 1)] for i in range(5)]
 
-print(matrix)'''
+print(matrix)
 
-'''
+
 #Exercise 15
 rows = 3
 cols = 3
@@ -203,24 +203,24 @@ print(matrix)
 
 #exercise 16
 relist = [x if x%2 == 0 else 0 for x in range(10)]
-print(relist)'''
+print(relist)
 
-'''
+
 #Exercise 17
 list = [x**2 for x in range(11) if x % 2 == 0]
 print(list)
 
 #Exerxise 18
 Identity = [[1 if j == i else 0 for j in range(4)] for i in range(4)]
-print(Identity) '''
+print(Identity)
 
-'''
+
 #Exercise 19
 matrix = [[(i+j) if (i+j) != 4 else 'skip'for j in range(4)]for i in range(4) if i!=1]
 
 flattened = [val for row in matrix for val in row]
 
-print(flattened) '''
+print(flattened) 
 
 matrix = [[i*j for j in range(3)] for i in range(3) if i> 0]
 flattened = [val for row in matrix for val in row]
