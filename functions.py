@@ -303,6 +303,7 @@ print(f"Average Voltage: {results['average_voltage']:.2f} V")
 print(f"Highest: {results['highest']['sensor']} at timestamp {results['highest']['timestamp']} → {results['highest']['voltage']}V")
 print(f"Lowest: {results['lowest']['sensor']} at timestamp {results['lowest']['timestamp']} → {results['lowest']['voltage']}V") '''
 
+'''
 #11
 batteries = [
     {"battery_id": "A1", "voltage": 3.7, "temperature": 28},
@@ -336,3 +337,38 @@ print(f"Total Batteries: {Summary['total_batteries']}")
 print(f"Average Voltage: {Summary['average']:.2f}V")
 print(f"Hottest Battery: {Summary['hottest']['battery_id']} at {Summary['hottest']['temperature']} deg C")
 print(f"Weakest Battery: {Summary['weakest']['battery_id']} at {Summary['weakest']['voltage']}V")
+'''
+
+#12
+lines = [
+    {"line_id": "L1", "voltage": 330, "current": 0.5, "distance_km": 120},
+    {"line_id": "L2", "voltage": 132, "current": 1.2, "distance_km": 85},
+    {"line_id": "L3", "voltage": 330, "current": 0.8, "distance_km": 200},
+    {"line_id": "L4", "voltage": 11, "current": 5.0, "distance_km": 15},
+    {"line_id": "L5", "voltage": 132, "current": 2.1, "distance_km": 60},
+]
+def line_report(lines):
+    total_lines = len(lines)
+    longest = lines[0]
+    total_power = 0
+    highest_power_line = lines[0]
+    Summary = {}
+    for line in lines:
+        line['power'] = line['voltage'] * line['current']
+        if line['distance_km'] > longest['distance_km']:
+            longest = line
+        total_power += line['power']
+        if  line['power'] > highest_power_line['power']:
+            highest_power_line = line
+    Summary = {
+            'total_lines' : total_lines,
+            'total_power' : total_power,
+            'longest_line' : longest,
+            'highest_power_line' : highest_power_line
+        }
+    return Summary
+Summary = line_report(lines)
+print(f"Total Lines: {Summary['total_lines']}")
+print(f"Total Power: {Summary['total_power']:.2f}W")
+print(f"Longest Line: {Summary['longest_line']['line_id']} at {Summary['longest_line']['distance_km']}km")
+print(f"Highest Power Line: {Summary['highest_power_line']['line_id']} at {Summary['highest_power_line']['power']}W")
